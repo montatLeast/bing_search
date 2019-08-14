@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/icon.css" />
+    <script language="javascript" src="ext-3.3.0/adapter/ext/ext-base.js"></script>
+    <script language="javascript" src="ext-3.3.0/ext-all.js"></script>
+    <script language="javascript" src="ext-3.3.0/src/locale/ext-lang-zh_CN.js"></script>
+    <script language="javascript" src="search_field.js"></script>
+    <link type="text/css" rel="stylesheet" href="ext-3.3.0/resources/css/ext-all.css" />
+
+</head>
+
+<style type="text/css">
+    .x-form-trigger .search-icon {
+        src: 'image/capture.png';
+    }
+
+    #ext-gen25 {
+        src: 'image/capture.png';
+    }
+
+
+</style>
+
+<body style="background-image: url(image/th.jpg)">
+    <div id="test">
+        <img id="25555" src=""></div>
+    </div>
+
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var cntr = new Ext.Container({
+                renderTo: 'test',
+                layout: 'table',
+                style: {
+                    position: 'absolute',
+                },
+                pageX: 200,
+                pageY: 150,
+                layoutConfig: {
+                    columns: 2,
+                    rows: 2,
+                },
+                items: [
+                    {
+                        rowspan: 2,
+                        xtype: 'box',
+                        height: 100,
+                        autoEl: {
+                            tag: 'img',
+                            src: 'image/Bing-logo-2013.png'
+                        }
+                    },
+                    {
+                        xtype: 'tabpanel',
+                        width: 500,
+                        plain:true,
+                        border: false,
+                        activeTab: 0,
+                        cls: 'table_td1',
+                        items: [
+                            {
+                                id: '0',
+                                title: '国内版',
+                            },
+                            {
+                                id: '1',
+                                title: '国际版',
+                            }
+                        ]
+                    },
+                    {
+                        height: 30,
+                        id: 'icon',
+                        xtype: 'search-field',
+
+                    }
+                ]
+            });
+            a = Ext.getCmp('icon').trigger.dom;
+            a.src = 'image/search.png';
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
