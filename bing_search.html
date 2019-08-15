@@ -14,14 +14,20 @@
 </head>
 
 <style type="text/css">
-    .x-form-trigger .search-icon {
-        src: 'image/capture.png';
+
+    #test .x-form-field-wrap .x-form-trigger{
+        background-image: url('image/search.png');
+        height: 29px;
+        width: 28px;
     }
 
-    #ext-gen25 {
-        src: 'image/capture.png';
-    }
+    #test .x-form-field-wrap .x-form-trigger-over{
+        background-position: 0 0;
+        background-image: url('image/search.png');
+        height: 29px;
+        width: 28px;
 
+    }
 
 </style>
 
@@ -80,8 +86,8 @@
                     }
                 ]
             });
-            a = Ext.getCmp('icon').trigger.dom;
-            a.src = 'image/search.png';
+            // a = Ext.getCmp('icon').trigger.dom;
+            // a.src = 'image/search.png';
         });
 
 
